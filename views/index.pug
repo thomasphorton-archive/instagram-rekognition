@@ -1,0 +1,17 @@
+html
+  include partials/head.pug
+  body
+    include partials/nav.pug
+    .container
+      h1 Instagram/Rekognition Demo
+
+      if alert
+        .alert(role='alert' class='alert-' + alert.type)= alert.message
+
+      if user && user.username
+        p Logged in as #{user.username}
+        a(href='/media') View Images
+      else
+        a(href='https://api.instagram.com/oauth/authorize/?client_id=aad31923db344d6bb35056a41ee3862b&redirect_uri=http://localhost:3000/handleauth&response_type=code').btn.btn-lg.btn-primary Log In with Instagram
+
+    include partials/footer.pug

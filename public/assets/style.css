@@ -1,0 +1,13 @@
+.media-list-col {
+	margin-bottom: 1.5em;
+}
+
+.media-list-img {
+	max-width: 100%;
+}
+
+.footer {
+  margin-top: 0.5em;
+  border-top: 1px solid #DDD;
+  padding-top: 0.5em;
+}

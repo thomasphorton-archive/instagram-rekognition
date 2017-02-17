@@ -1,0 +1,25 @@
+html
+  include partials/head.pug
+  body
+    include partials/nav.pug
+    .container
+      h1 Media
+      .row
+        .col
+          img(src=media.images.low_resolution.url)
+      .row
+        .col
+          table.table.table-striped
+            thead
+              tr
+                th Label
+                th Confidence
+                th
+            each label in labels
+              tr
+                td= label.Name
+                td= label.Confidence
+                td
+                  a(href='/tag-search/' + encodeURIComponent(label.Name)) Search for Tags
+
+    include partials/footer.pug

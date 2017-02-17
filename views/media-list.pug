@@ -1,0 +1,14 @@
+html
+  include partials/head.pug
+  body
+    include partials/nav.pug
+    .container
+      h1 Media
+      
+      .row
+        each media in data
+          .col-4.media-list-col
+            a(href='/media/' + media.id)
+              img(src=media.images.low_resolution.url).media-list-img
+
+    include partials/footer.pug
